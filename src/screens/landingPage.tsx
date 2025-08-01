@@ -5,8 +5,7 @@ import { FiMenu, FiX, FiShoppingCart, FiSearch, FiChevronRight } from 'react-ico
 import { FaShippingFast, FaHeadset, FaCreditCard, FaShieldAlt } from 'react-icons/fa';
 import { BsStarFill, BsStarHalf } from 'react-icons/bs';
 import { AiOutlineTwitter, AiOutlineInstagram, AiOutlineFacebook, AiOutlineYoutube } from 'react-icons/ai';
-import styles from './landingpage.module.css';
-
+import styles from '../screens/landingPage.module.css';
 interface Product {
   id: number;
   name: string;
