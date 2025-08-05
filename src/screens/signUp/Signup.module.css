@@ -1,14 +1,12 @@
 .appContainer {
   display: flex;
-  min-height: 100vh;
-  font-family: 'Inter', sans-serif;
-    background: #f7fafc;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+  background: #f7fafc;
+}
 
-}
-body {
-  margin: 0;
-  padding: 0;
-}
 
 /* Left Container */
 .leftContainer {
@@ -43,7 +41,6 @@ body {
   position: relative;
   z-index: 2;
   text-align: center;
-  padding: 2rem;
   max-width: 600px;
 }
 
@@ -65,21 +62,23 @@ body {
 
 /* Right Container */
 .rightContainer {
-      position: relative;
+  position: relative;
   flex: 1;
   background-color: #f8fafc;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 3rem;
+  padding-top: 3rem;
+  width: 100%;
 }
 
 .formWrapper {
-  max-width: 450px;
-  width: 100%;
-  margin: 0 auto;
+   display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+    width: 100%;
 }
 
 .rightContainer h2 {
@@ -96,25 +95,29 @@ body {
 }
 
 .form {
-  display: flex;
+   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+  align-self: center;
+  width: 100%;
+  max-width: 450px;
 }
 
 .inputGroup {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
+    justify-content: center;
+    width: 100%;
 }
 
 .input {
-  padding: 0.9rem 1rem;
-  border: 1px solid #e2e8f0;
-  border-radius: 8px;
-  font-size: 0.95rem;
-  transition: all 0.2s;
-  background-color: #f8fafc;
+   padding: 0.85rem 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.5rem;
+  font-size: 1rem;
   width: 100%;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
 }
 
 .input:focus {
@@ -153,7 +156,6 @@ body {
   color: #64748b;
   font-size: 0.85rem;
   cursor: pointer;
-  padding: 0.25rem 0.5rem;
 }
 
 .showPassword:hover {
@@ -163,7 +165,7 @@ body {
 .checkboxGroup {
   display: flex;
   align-items: center;
-  margin-top: 0.5rem;
+  margin-top: -0.5rem;
 }
 
 .checkbox {
@@ -256,11 +258,16 @@ body {
   .content p {
     font-size: 1rem;
   }
+  .leftContainer{
+    flex: 1;
+  }
 }
 
 @media (max-width: 768px) {
   .appContainer {
     flex-direction: column;
+    height: auto;
+    min-height: 100vh;
   }
 
   .leftContainer {
@@ -268,25 +275,23 @@ body {
     border-radius: 0 0 16px 16px;
   }
 
-  .content {
-    padding: 1.5rem;
-  }
-
+  
   .content h1 {
     font-size: 1.8rem;
     margin-bottom: 1rem;
   }
 
-  .rightContainer {
-    padding: 2rem 1.5rem;
-  }
+  
 }
 
 @media (max-width: 480px) {
   .leftContainer {
-    height: 180px;
+display: none;  }
+.rightContainer {
+    width: 100%;
+    justify-content: flex-start;
+    padding-top: 0;
   }
-
   .content h1 {
     font-size: 1.5rem;
   }
@@ -309,7 +314,7 @@ body {
   right: 0;
   width: 200px; /* or your preferred size */
   height: auto;
-  /* opacity: 0.8; */
+  opacity: 0.9;
   pointer-events: none; /* so it doesn't interfere with form interaction */
   transition: all 0.3s ease-in-out;
 

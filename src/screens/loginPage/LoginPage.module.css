@@ -6,15 +6,11 @@
   font-family: 'Poppins', sans-serif;
   background: #f7fafc;
 }
-body {
-  margin: 0;
-  padding: 0;
-}
+
 
 /* Left: Login Form */
 .leftContainer {
   flex: 1;
-  padding: 2rem 1.5rem;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -22,17 +18,23 @@ body {
   position: relative;
   z-index: 2;
   min-height: 100vh;
+  width: 100%;
 }
+body {
+  margin: 0;
+  padding: 0;
+}   
 
 .formWrapper {
-  width: 100%;
-  max-width: 400px;
-  margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+    width: 100%;
 }
 
 .formWrapper h2 {
   font-size: 1.75rem;
-  margin-bottom: 0.5rem;
   color: #1e293b;
 }
 
@@ -47,12 +49,16 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+  align-self: center;
+  width: 100%;
+  max-width: 450px;
 }
 
 .inputGroup {
   display: flex;
   flex-direction: column;
-  text-align: left;
+  justify-content: center;
+  width: 100%;
 }
 
 .inputLabel {
@@ -76,6 +82,7 @@ body {
   outline: none;
   border-color: #4f46e5;
   box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
+  background-color: #ffffff;
 }
 
 .errorInput {
@@ -107,7 +114,6 @@ body {
   color: #64748b;
   font-size: 0.85rem;
   cursor: pointer;
-  padding: 0.25rem 0.5rem;
 }
 
 .checkboxGroup {
@@ -202,7 +208,6 @@ body {
   position: relative;
   z-index: 3;
   text-align: center;
-  padding: 2rem;
   color: #ffffff;
   max-width: 500px;
 }
@@ -235,9 +240,7 @@ body {
     flex: 1;
   }
   
-  .content {
-    padding: 1.5rem;
-  }
+ 
   
   .content h1 {
     font-size: 1.75rem;
@@ -256,7 +259,7 @@ body {
   }
   
   .leftContainer {
-    padding: 2rem 1.5rem 3rem;
+    /* padding: 16px; */
     min-height: auto;
   }
   
@@ -268,7 +271,6 @@ body {
   
   .content {
     max-width: 100%;
-    padding: 1rem;
   }
   
   .content h1 {
@@ -287,9 +289,7 @@ body {
     bottom: 5px;
   }
   
-  .formWrapper {
-    padding: 0;
-  }
+  
 }
 
 @media (max-width: 480px) {
@@ -298,7 +298,6 @@ body {
   }
   
   .leftContainer {
-    padding: 2rem 1.25rem;
     width: 100%;
     justify-content: flex-start;
     padding-top: 3rem;
@@ -314,15 +313,13 @@ body {
   }
   
   .input {
-    padding: 0.8rem 1rem;
+    /* padding: 0.8rem 1rem; */
     font-size: 0.95rem;
   }
   
   .submitButton {
     padding: 0.8rem;
     font-size: 0.95rem;
-    width: calc(100% - 4rem);
-    margin: 0 1rem;
   }
   
   .leftContainerImage {
@@ -343,22 +340,3 @@ body {
   }
 }
 
-/* Very small screens */
-@media (max-width: 360px) {
-  .leftContainer {
-    padding: 1.5rem 1rem;
-  }
-  
-  .formWrapper h2 {
-    font-size: 1.4rem;
-  }
-  
-  .input {
-    padding: 0.75rem 0.9rem;
-  }
-  
-  .leftContainerImage {
-width: 280px;
-    left: 8px;
-    bottom: 8px;  }
-}
