@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import styles from "./LoginPage.module.css";
+import { useNavigate } from "react-router-dom";
 
 type LoginData = {
   email: string;
@@ -20,6 +21,7 @@ const LoginPage: React.FC = () => {
     console.log("Login Data:", data);
     // Handle login logic here
   };
+    const navigate = useNavigate();
 
   return (
     <div className={styles.appContainer}>
@@ -101,7 +103,7 @@ const LoginPage: React.FC = () => {
 
             <p className={styles.signupText}>
               Don't have an account?{" "}
-              <a href="/signup" className={styles.signupLink}>
+              <a onClick={() => navigate("/signup")} className={styles.signupLink}>
                 Sign up
               </a>
             </p>

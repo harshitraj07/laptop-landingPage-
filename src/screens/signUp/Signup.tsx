@@ -162,7 +162,7 @@ const Signup: React.FC = () => {
             <button type="submit" className={styles.submitButton}>Create Account</button>
 
             <p className={styles.loginText}>
-              Already have an account? <a href="/login" className={styles.loginLink}>Log in</a>
+              Already have an account? <a  onClick={() => navigate("/login")} className={styles.loginLink}>Log in</a>
             </p>
 
             {submitted && (
